@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyTorch model files
+*.pth
+*.pt
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+*.csv
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# Deployment cache (if any)
+*.cache
+
+# VS Code settings
+.vscode/
