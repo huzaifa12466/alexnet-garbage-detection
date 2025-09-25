@@ -1,4 +1,5 @@
 # Garbage Classifier using AlexNet ♻️
+**Live Demo:** [Streamlit App](https://alexnet-garbage-detection-3kpctmbnuq2xthsbgtzkje.streamlit.app/)
 
 ![GitHub Repo Size](https://img.shields.io/badge/Repo-Complete-brightgreen) ![Python Version](https://img.shields.io/badge/Python-3.11-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red) ![Streamlit](https://img.shields.io/badge/Streamlit-1.26-orange)
 
