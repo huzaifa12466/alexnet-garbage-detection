@@ -3,6 +3,8 @@
 
 ![GitHub Repo Size](https://img.shields.io/badge/Repo-Complete-brightgreen) ![Python Version](https://img.shields.io/badge/Python-3.11-blue) ![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red) ![Streamlit](https://img.shields.io/badge/Streamlit-1.26-orange)
 
+**Live Demo:** [Streamlit App](https://garbage-classifier-kce7467ekuxbs6nxzs9moa.streamlit.app/)
+
 This repository contains a **Garbage Classifier** built using both **AlexNet (from scratch)** and **ResNet-50 (pretrained)**, trained to classify **10 types of garbage**:
 
 `metal, biological, trash, glass, paper, clothes, cardboard, shoes, battery, plastic`.
