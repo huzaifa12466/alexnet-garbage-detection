@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
+from torchvision import models
 
+# ------------------ AlexNet ------------------
 class AlexNet(nn.Module):
     def __init__(self, num_classes=10):
         super(AlexNet, self).__init__()
@@ -39,9 +41,29 @@ class AlexNet(nn.Module):
         x = self.classifier(x)
         return x
 
-def load_model(weights_path="best_model_alexnet.pth", device="cpu"):
+def load_alexnet(weights_path, device="cpu"):
     model = AlexNet(num_classes=10)
     model.load_state_dict(torch.load(weights_path, map_location=device))
-    model.eval()
     model.to(device)
+    model.eval()
+    return model
+
+# ------------------ ResNet-50 ------------------
+def load_resnet(weights_path, device="cpu"):
+    model = models.resnet50(pretrained=True)
+    
+    # Freeze all layers first
+    for param in model.parameters():
+        param.requires_grad = False
+
+    # Unfreeze last conv block (layer4) and FC
+    for param in model.layer4.parameters():
+        param.requires_grad = True
+
+    num_ftrs = model.fc.in_features
+    model.fc = nn.Linear(num_ftrs, 10)  # 10 garbage classes
+    model.load_state_dict(torch.load(weights_path, map_location=device))
+    
+    model.to(device)
+    model.eval()
     return model
